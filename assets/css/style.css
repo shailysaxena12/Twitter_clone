@@ -1,0 +1,520 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+  padding: 0rem 2rem;
+  padding-right: 6rem;
+}
+.wrapper aside {
+  width: 370px;
+  overflow: auto;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+.wrapper .left {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0rem 3rem;
+  padding-left: 3rem;
+}
+@media (max-width: 1199px) {
+  .wrapper .left {
+    width: 65px;
+    padding: 0rem 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper .left {
+    padding: 0rem 0.6rem;
+  }
+}
+.wrapper .left .logo {
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  margin-left: 25px;
+}
+@media (max-width: 1199px) {
+  .wrapper .left .logo {
+    margin-left: 0px;
+    margin: 0rem 0rem;
+  }
+}
+.wrapper .left .logo svg {
+  width: 30px;
+  height: 30px;
+}
+.wrapper .left .logo:hover {
+  background-color: gainsboro;
+  border-radius: 100%;
+}
+.wrapper .left nav {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px 0px;
+}
+@media (max-width: 1199px) {
+  .wrapper .left nav {
+    padding: 0px;
+  }
+}
+.wrapper .left nav .link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 2rem;
+}
+@media (max-width: 1199px) {
+  .wrapper .left nav .link {
+    padding: 0.4rem 0.7rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+@media (max-width: 991px) {
+  .wrapper .left nav .link {
+    padding: 1.3rem;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper .left nav .link {
+    padding: 0.4rem;
+  }
+}
+.wrapper .left nav .link svg {
+  width: 30px;
+  height: 30px;
+}
+.wrapper .left nav .link span {
+  font-size: 22px;
+}
+@media (max-width: 1199px) {
+  .wrapper .left nav .link span {
+    display: none;
+  }
+}
+.wrapper .left nav .link:hover {
+  background-color: gainsboro;
+  border-radius: 25px;
+}
+.wrapper .left nav .main-cta {
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 50px;
+  margin-top: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 50px;
+}
+.wrapper .left nav .main-cta:hover {
+  background-color: #222;
+}
+@media (max-width: 1199px) {
+  .wrapper .left nav .main-cta {
+    width: 50px;
+  }
+}
+.wrapper .left nav .main-cta svg {
+  display: none;
+  fill: white;
+  height: 25px;
+  width: 25px;
+}
+@media (max-width: 1199px) {
+  .wrapper .left nav .main-cta svg {
+    display: block;
+  }
+  .wrapper .left nav .main-cta span {
+    display: none;
+  }
+}
+.wrapper .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  padding-right: 10px;
+  padding: 5px 0px;
+}
+@media (max-width: 1199px) {
+  .wrapper .profile {
+    padding-right: 0px;
+    padding-left: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper .profile {
+    padding-left: 0.2rem;
+  }
+}
+.wrapper .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.wrapper .profile h4 {
+  font-size: 16px;
+}
+@media (max-width: 1199px) {
+  .wrapper .profile h4 {
+    display: none;
+  }
+}
+.wrapper .profile h4 small {
+  font-size: 14px;
+}
+.wrapper .profile svg {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 767px) {
+  .wrapper .profile svg {
+    display: none;
+  }
+}
+.wrapper .profile:hover {
+  background-color: gainsboro;
+  border-radius: 25px;
+}
+
+main {
+  border-right: 2px solid gainsboro;
+  border-left: 2px solid gainsboro;
+  width: calc(100% - 740px);
+}
+@media (max-width: 1199px) {
+  main {
+    width: calc(100% - 80px);
+  }
+}
+main .tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid gainsboro;
+  align-items: center;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+main .tabs .tab {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main .tabs .tab:hover {
+  background-color: gainsboro;
+}
+main .tabs .tab span {
+  padding: 1rem 0;
+  position: absolute;
+  top: -10px;
+  border-bottom: 4px solid dodgerblue;
+  border-radius: 2px;
+}
+main .profilesection {
+  display: flex;
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid gainsboro;
+}
+main .profilesection img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+main .profilesection .profilecontent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+main .profilesection .profilecontent input {
+  height: 45px;
+  font-size: 22px;
+  border: none;
+  outline: none;
+}
+main .profilesection .profilecontent .profilebtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .profilesection .profilecontent .profilebtn .icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 22px;
+}
+main .profilesection .profilecontent .profilebtn .icon:nth-child(7) {
+  flex-grow: 1;
+}
+main .profilesection .profilecontent .profilebtn .icon svg {
+  width: 20px;
+  height: 20px;
+  fill: dodgerblue;
+  gap: 10px;
+}
+main .profilesection .profilecontent .profilebtn .btn {
+  text-decoration: none;
+  padding: 10px 25px;
+  background-color: black;
+  color: white;
+  border-radius: 100px;
+  text-align: center;
+}
+main .showpost {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid gainsboro;
+}
+main .showpost .post {
+  text-decoration: none;
+  font-size: 16px;
+  color: dodgerblue;
+  border-bottom: thin solid gainsboro;
+}
+main .showpost:hover {
+  width: 100%;
+}
+
+.right {
+  position: sticky;
+  top: 0;
+}
+@media (max-width: 1199px) {
+  .right {
+    display: none;
+  }
+}
+.right .search-box {
+  display: flex;
+  border-radius: 100px;
+  position: sticky;
+  top: 0;
+  background-color: whitesmoke;
+}
+.right .search-box i,
+.right .search-box input {
+  padding: 0.5rem 1rem;
+  flex-grow: 1;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+}
+.right .search-box input {
+  padding-left: 0;
+}
+.right .search-box i {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.right .premium {
+  padding: 0.5rem 1.5rem;
+  margin-top: 10px;
+  border: 2px solid gainsboro;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.right .premium h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.right .premium p {
+  font-size: 14px;
+  font-weight: 450;
+}
+.right .premium .premiumbtn {
+  background-color: black;
+  padding: 9px 15px;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+.right .trendingdetails {
+  height: 480px;
+  padding: 1rem 0rem;
+  border: 2px solid gainsboro;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.right .trendingdetails h1 {
+  font-size: 25px;
+  padding-left: 15px;
+}
+.right .trendingdetails .trendcard1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin: 15px 0px;
+}
+.right .trendingdetails .trendcard1 .leftsection {
+  height: 80px;
+}
+.right .trendingdetails .trendcard1 .leftsection span {
+  font-size: 12px;
+  color: gray;
+}
+.right .trendingdetails .trendcard1 .leftsection h3 {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+.right .trendingdetails .trendcard1:hover {
+  background-color: #f9f9f9;
+}
+.right .trendingdetails .trendlink {
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+.post {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: thin solid rgb(118, 118, 118);
+  cursor: pointer;
+}
+.post:hover {
+  background-color: #f9f9f9;
+}
+.post .profile-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+.post .post-data {
+  width: calc(100% - 56px);
+}
+.post .post-data .header {
+  display: flex;
+  justify-content: space-between;
+}
+.post .post-data .header .heading {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 14px;
+}
+.post .post-data .header .heading svg {
+  height: 16px;
+  width: 16px;
+}
+.post .post-data .header .heading small {
+  font-size: 14px;
+  color: rgb(118, 118, 118);
+}
+.post .post-data .header .btn-more {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.post .post-data .header .btn-more:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.post .post-data .post-content {
+  position: relative;
+}
+.post .post-data .post-content p {
+  font-size: 14px;
+}
+.post .post-data .post-content .post-img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+}
+.post .post-data .post-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  gap: 1rem;
+}
+.post .post-data .post-controls .control-links,
+.post .post-data .post-controls .action-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post .post-data .post-controls .control-links {
+  flex-grow: 1;
+  margin-right: 2rem;
+}
+.post .post-data .post-controls .likelink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  padding: 5px 8px;
+}
+.post .post-data .post-controls .likelink svg {
+  height: 24px;
+  width: 24px;
+  fill: rgb(118, 118, 118);
+}
+.post .post-data .post-controls .likelink span {
+  font-size: 12px;
+  color: rgb(118, 118, 118);
+}
+.post .post-data .post-controls .likelink:hover {
+  background-color: #f9f9f9;
+  border-radius: 25px;
+}/*# sourceMappingURL=style2.css.map */
